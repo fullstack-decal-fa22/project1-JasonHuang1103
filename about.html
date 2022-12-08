@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<head>
+    <meta name="author" content="Jason Huang">
+    <meta name="description" content="Jason Huang's Website">
+    <title>Jason Huang's Website</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+    <div id="mySidebar" class="sidebar" onmouseover="toggleSidebar()" onmouseout="toggleSidebar()">
+        <a href="./index.html"><i class="material-icons">home</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;home</span></a>
+        <br>
+        <a href="./about.html"><i class="material-icons">info</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;about</span></a>
+        <br>
+        <a href="./work.html"><i class="material-icons">token</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;work</span></a>
+        <br>
+        <a href="./contact.html"><i class="material-icons">email</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;contact<span></a>
+    </div>
+
+    <div id="main">
+        <img src="logo.png">
+
+        <div class="short-about">About
+            <div class="long-about">Hi, my name is Jason Huang. I'm a sophomore student studying Computer Science and Cognitive 
+                Science at UC Berkeley.</div>
+        </div>
+        <div class="short-passion">Passion
+            <div class="long-passion">As a Sci-fi fan, topics regarding future and technology are rather appealing to me. With 
+                the hope of bringiing those image to reality, I'm hoping to pursue studies in AI/ML. To achieve such a goal and 
+                eventually become a member within the field, I'm trying to expand my knowledge of different coding language and 
+                directions by taking CS-related DeCal course like FullStack and gaining practical experience through internships 
+                like Geopogo.</div>
+        </div>
+        <div class="short-summary">Summary of the Project
+            <div class="long-summary">The website consists of 4 pages: home, about, work, and contact. At the hoome page, there is a 
+                super-duper cool button that does absolutely nothing. At the about page, I have briefly introduced myself as well as 
+                the general layout/function of each page. A thing to note out is the sliding effect of the text on hover, which took 
+                me 8 hours to get it done, so a good job will be appreciated. At the work page, I have included some artworks I have 
+                done because I don't really have projects to show (ouch). Lastly, the contact page includes some contact information 
+                of mine. In addition, note that there is also a sidebar that allows one to access different page efficiently, which, 
+                though acquired the template and concept online, took me a good half day to make it work.</div>
+        </div>
+
+        <div class="useless-text1">
+            <h2>Hi, I'm h2</h2>
+            <h3>Hi, I'm h3</h3>
+        </div>
+        <div class="useless-text2">
+            <h4>Hi, I'm h4</h4>
+            <h5>Hi, I'm h5</h5>
+            <h6>Hi, I'm h6</h6>
+        </div>
+    </div>
+
+    <script>
+        var mini = true;
+        function toggleSidebar() {
+            if (mini) {
+                console.log("opening sidebar");
+                document.getElementById("mySidebar").style.width = "250px";
+                document.getElementById("main").style.marginLeft = "250px";
+                this.mini = false;
+            } else {
+                console.log("closing sidebar");
+                document.getElementById("mySidebar").style.width = "85px";
+                document.getElementById("main").style.marginLeft = "85px";
+                this.mini = true;
+            }
+        }
+    </script>
+</body>

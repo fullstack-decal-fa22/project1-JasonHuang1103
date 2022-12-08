@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+    <meta name="author" content="Jason Huang">
+    <meta name="description" content="Jason Huang's Website">
+    <title>Jason Huang's Website</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+    <div id="mySidebar" class="sidebar" onmouseover="toggleSidebar()" onmouseout="toggleSidebar()">
+        <a href="./index.html"><i class="material-icons">home</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;home</span></a>
+        <br>
+        <a href="./about.html"><i class="material-icons">info</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;about</span></a>
+        <br>
+        <a href="./work.html"><i class="material-icons">token</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;work</span></a>
+        <br>
+        <a href="./contact.html"><i class="material-icons">email</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;contact<span></a>
+    </div>
+
+    <div id="main">
+        <img src="logo.png">
+        <h1 class="name">Jason Huang</h1>
+        <button id="cool-button" onclick="alert('Very Cool Text')">Very Cool Button</button>
+        <input id="submit-button" type="submit">
+    </div>
+
+    <script>
+        var mini = true;
+        function toggleSidebar() {
+            if (mini) {
+                console.log("opening sidebar");
+                document.getElementById("mySidebar").style.width = "250px";
+                document.getElementById("main").style.marginLeft = "250px";
+                this.mini = false;
+            } else {
+                console.log("closing sidebar");
+                document.getElementById("mySidebar").style.width = "85px";
+                document.getElementById("main").style.marginLeft = "85px";
+                this.mini = true;
+            }
+        }
+    </script>
+</body>
